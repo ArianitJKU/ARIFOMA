@@ -233,7 +233,7 @@ workflow — including scenario loading, radar deployment setup, victim
 selection, and FOM visualization — without directly editing the
 simulation scripts.
 
-![ARIFOMA GUI Preview](docs/images/arifoma_gui_preview.png)
+![ARIFOMA GUI Preview](arifoma_gui_preview.png)
 *Preliminary view of the ARIFOMA GUI. Full release pending acceptance
 of the accompanying publication.*
 

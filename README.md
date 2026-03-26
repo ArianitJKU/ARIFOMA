@@ -9,7 +9,7 @@
 - Institute of Signal Processing, Johannes Kepler University Linz, Austria
 - Infineon Technologies AG, Neubiberg, Germany
 
-**Contact:** {arianit.preniqi, oliver.lang, reinhard.feger}@jku.at · stefan.schmalzl@infineon.com
+**Contact:** arianit.preniqi}@jku.at
 
 ---
 

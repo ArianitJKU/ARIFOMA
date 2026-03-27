@@ -145,8 +145,6 @@ addpath(genpath('path/to/ARIFOMA'));
 
 3. **Place scenario data**
 
-Download the scenario MAT-file (see [Reproducing Published Results](#reproducing-published-results)) and update the input path in `main_sim.m`:
-
 ```matlab
 cfg.inputMat = 'path/to/Density85Highwaydata.mat';
 ```
@@ -362,8 +360,9 @@ Each corner context (e.g., `radarCtx.FL`) contains:
 ---
 
 ## Reproducing Published Results
+Run SUMO and WiLabVIsim with 3 lanes for each eastbound and westbound direction and a vehicle density of 85 vehicles/km (see [Reproducing Published Results](#reproducing-published-results)), convert the `db` file to `.mat` file, and update the input path in `main_sim.m`. If desired, the data file used can be requested also per email due to its size. 
 
-Download `Density85Highwaydata.mat` and place it in the `data/` directory. The case study (LPF bandwidth variation, homogeneous MRR and SRR deployments, Table 3 of the paper) uses the following configuration:
+The case study (LPF bandwidth variation, homogeneous MRR and SRR deployments, Table 3 of the paper) uses the following configuration:
 
 ```matlab
 cfg.BADC_Hz                    = 25e6;   % Vary over {25, 50, 75, 100} MHz to reproduce Fig. 4

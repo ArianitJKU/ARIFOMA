@@ -236,7 +236,7 @@ simulation scripts.
 
 ![ARIFOMA GUI Preview](arifoma_gui_preview.png)
 *Preliminary view of the ARIFOMA GUI. Full release pending acceptance
-of the accompanying publication.*
+of the corresponding publication.*
 
 > **Note:** The ARIFOMA GUI application is currently withheld pending
 > acceptance of the accompanying publication. It will be released in this

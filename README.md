@@ -23,14 +23,14 @@
 6. [Quick Start](#quick-start)
 7. [Configuration Reference](#configuration-reference)
 8. [Graphical User Interface](#graphical-user-interface)
-9. [Interference Model](#interference-model)
-10. [Figures of Merit](#figures-of-merit)
-11. [Radar Deployments](#radar-deployments)
-12. [Mitigation Strategies](#mitigation-strategies)
-13. [Output Files](#output-files)
-14. [Reproducing Published Results](#reproducing-published-results)
-15. [Citation](#citation)
-16. [License](#license)
+9. [Visaulization](#visualization)
+10. [Interference Model](#interference-model)
+11. [Figures of Merit](#figures-of-merit)
+12. [Radar Deployments](#radar-deployments)
+13. [Mitigation Strategies](#mitigation-strategies)
+14. [Output Files](#output-files)
+15. [Reproducing Published Results](#reproducing-published-results)
+16. [Citation](#citation)
 
 ---
 
@@ -241,6 +241,27 @@ of the accompanying publication.*
 > acceptance of the accompanying publication. It will be released in this
 > repository upon acceptance.
 
+---
+
+## Visualization
+
+> **Note:** The live visualization described below applies to the manual 
+> simulation script (`main_sim.m`). The ARIFOMA GUI app has its own 
+> integrated visualization interface (see [Graphical User Interface](#graphical-user-interface)).
+
+During simulation, `main_sim.m` generates a live tiled display consisting of:
+
+- **Scene overview (top panel):** A top-down view of the highway scene at
+  each acquisition snapshot, showing all vehicles, sensor fields of view,
+  and the active interference paths between the victim and its potential
+  interferers.
+
+- **Per-corner spectrogram panels (2×2 tiles):** One panel per victim
+  corner (FL, FR, RL, RR), displaying the IF signal spectrogram for each
+  CPI. These panels visualize the interference structure
+  directly in the time-frequency domain, including the overlap with the victim's LPF bandwidth.
+  ![ARIFOMA Visualization Preview](arifoma_manual_visualization.png)
+*Preliminary view of the ARIFOMA visualization.*
 ---
 
 ## Figures of Merit

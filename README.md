@@ -102,8 +102,6 @@ ARIFOMA/
 | Requirement | Version | Notes |
 |---|---|---|
 | MATLAB | R2021a or later | Tested on R2022b and R2023a |
-| Signal Processing Toolbox | any | Required for IF signal and spectrum processing |
-| Phased Array System Toolbox | any | Required for range-Doppler processing |
 | SUMO | 1.14+ | Only needed to regenerate scenario data |
 | WiLabVISim | — | Only needed to regenerate scenario data |
 

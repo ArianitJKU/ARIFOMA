@@ -49,7 +49,7 @@ Unlike existing tools that generally focus on individual FOMs such as interferen
 
 ## Framework Architecture
 
-ARIFOMA is the radar-level layer of a three-tier simulation stack:
+ARIFOMA is the radar-level layer of a three-level simulation stack:
 
 **Traffic-level modeling (SUMO):** The highway traffic scenario is generated with *L* lanes in eastbound and westbound direction and a vehicle density of *V* vehicles/km. 
 

@@ -24,8 +24,6 @@
 7. [Configuration Reference](#configuration-reference)
 8. [Graphical User Interface](#graphical-user-interface)
 9. [Visaulization](#visualization)
-10. [Interference Model](#interference-model)
-11. [Figures of Merit](#figures-of-merit)
 12. [Radar Deployments](#radar-deployments)
 13. [Mitigation Strategies](#mitigation-strategies)
 14. [Output Files](#output-files)
@@ -210,22 +208,6 @@ Each cardinal direction maps to a 1 GHz sub-band within the 77–81 GHz operatin
 
 ---
 
-## Interference Model
-
-ARIFOMA implements the following radar-level interference model. Let *N*_R FMCW radars operate with index set R = {1, …, *N*_R}. Radar ϱ ∈ R transmits *N*_s,ϱ linear chirps starting at frequency *f*_0,ϱ with chirp slope κ_ϱ = *B*_κ,ϱ / *T*_κ,ϱ, where *B*_κ,ϱ is the modulation bandwidth and *T*_κ,ϱ the active chirp interval. Each chirp is followed by an idle interval *T*_i,ϱ, giving a pulse repetition interval (PRI) of *T*_PRI,ϱ = *T*_κ,ϱ + *T*_i,ϱ.
-
-Victim radar ν ∈ R experiences interference from interferer γ when the instantaneous IF frequency difference satisfies |Δ*f*| ≤ *B*_LPF,ν, where *B*_LPF,ν is the victim's LPF bandwidth (set by `cfg.BADC_Hz`). The resulting interference duration per chirp pair is:
-
-```
-T_I,ν,γ = 2 * B_LPF,ν / |κ_ν − κ_γ|
-```
-
-Received interference power is modeled according to the dominant propagation path — either a LOS path with distance *d*_D,ν,γ or a first-order reflected path with distance *d*_R,ν,ρ,γ via reflection point ρ, with associated path attenuation β_ρ.
-
-In practice, geometrically visible radars are not always transmitting simultaneously. This is modeled by the concurrent transmission probability *P*_CT, defined as the fraction of radars that obtain CPIs within the same time window. Random transmission start times *t*_s,ϱ and the number of CPIs per acquisition interval *N*_F are both configurable.
-
----
-
 ## Graphical User Interface
 
 ARIFOMA includes a graphical user interface (GUI) built as a MATLAB App,
@@ -262,20 +244,6 @@ During simulation, `main_sim.m` generates a live tiled display consisting of:
   directly in the time-frequency domain, including the overlap with the victim's LPF bandwidth.
   ![ARIFOMA Visualization Preview](arifoma_manual_visualization.png)
 *Preliminary view of the ARIFOMA visualization.*
----
-
-## Figures of Merit
-
-For each CPI obtained by the victim vehicle's radars, ARIFOMA computes the following unified interference-related FOMs:
-
-| Metric | Definition | FOM |
-|---|---|---|
-| **Per-CPI interference ratio** | Fraction of PRIs interfered at least once within a CPI | Interference probability, consecutive interfered PRIs, signal reconstruction constraints |
-| **Normalized interference duration** | Fraction of interfered samples in the IF signal: *T*_I,ν,γ / *T*_κ,ν | Impact on IF signal samples and signal reconstruction constraints |
-| **Interference path origin and distance** | Distance and classification of LOS (*d*_D,ν,γ) and reflected (*d*_R,ν,ρ,γ) paths | Interference severity, expected SIR degradation, reconstruction constraints |
-| **Number of interferers per PRI** | Distinct interferers affecting a radar within one PRI | Probability of multiple interference and reconstruction constraints |
-| **Deployment configuration** | Combination of radar types and mitigation strategies | System-level and standardization mitigation effectiveness |
-
 ---
 
 ## Radar Deployments

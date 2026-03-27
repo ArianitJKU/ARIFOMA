@@ -170,7 +170,7 @@ All experiment parameters are set in the **User Configuration** section of `main
 
 | Field | Default | Description |
 |---|---|---|
-| `cfg.worstVehicle` | `false` | Automatically select the highest-interference victim vehicle |
+| `cfg.worstVehicle` | `false` | Automatically select the victim vehicle experiencing the highest number of potential victim links as per WiLabVIsim |
 | `cfg.specificVehicle` | `true` | Use the fixed ID in `cfg.VehID` |
 | `cfg.VehID` | `243` | Victim vehicle ID (used when `specificVehicle = true`) |
 

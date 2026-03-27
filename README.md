@@ -228,8 +228,8 @@ Each cardinal direction maps to a 1 GHz sub-band within the 77–81 GHz operatin
 
 ARIFOMA includes a graphical user interface (GUI) built as a MATLAB App,
 designed to allow users to configure and execute the full simulation
-workflow — including scenario loading, radar deployment setup, victim
-selection, and FOM visualization — without directly editing the
+workflow, including scenario loading, radar deployment setup, victim
+selection, and FOM visualization, without directly editing the
 simulation scripts.
 
 ![ARIFOMA GUI Preview](arifoma_gui_preview.png)

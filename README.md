@@ -338,11 +338,11 @@ cfg.Seed         = 7;
 If you use ARIFOMA in your research, please cite:
 
 ```bibtex
-@inproceedings{preniqi2025arifoma,
+@inproceedings{preniqi2026arifoma,
   author    = {Preniqi, Arianit and Lang, Oliver and Schmalzl, Stefan and Feger, Reinhard},
   title     = {{ARIFOMA}: A Traffic-Driven Simulation Framework for Automotive Radar Interference Evaluation},
   booktitle = {Proceedings of the European Microwave Week (EuMW)},
-  year      = {2025},
+  year      = {2026},
   note      = {Under review}
 }
 ```

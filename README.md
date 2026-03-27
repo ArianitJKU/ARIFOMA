@@ -183,7 +183,7 @@ All experiment parameters are set in the **User Configuration** section of `main
 | Field | Default | Description |
 |---|---|---|
 | `cfg.paramMode` | `"EXTENDED"` | Parameter-generation mode (see [Radar Deployments](#radar-deployments)) |
-| `cfg.UseFixedSeed` | `false` | Force deterministic RNG — overrides `paramMode` to `"FIXED PARAMETER POOL"` |
+| `cfg.UseFixedSeed` | `false` | Force deterministic RNG |
 | `cfg.Seed` | `7` | RNG seed, if reproducible results are desired) |
 | `cfg.pHasSensor` | `1` | Concurrent transmission probability |
 | `cfg.victimscenarioPerCorner` | all `"MRR"` | Radar class assigned to each victim corner (FL, FR, RL, RR) |
@@ -261,7 +261,7 @@ The parameter-generation mode (`cfg.paramMode`) controls how waveform parameters
 | Mode | Description |
 |---|---|
 | `"EXTENDED"` | Draws waveform parameters from extended random distributions within the per-class bounds |
-| `"FIXED PARAMETER POOL"` | Deterministic seed-reproducible parameter pool; enabled automatically when `cfg.UseFixedSeed = true` |
+| `"FIXED PARAMETER POOL"` | Fixed number of radar waveforms distributed among the vehicles to represent a fixed number of manufacturers with number `cfg.numFixedWaveforms` |
 | `"COMPASS"` | Assigns carrier frequencies by the compass-facing direction of each sensor corner, partitioning the 77–81 GHz band into four 1 GHz sub-bands (NW / NE / SE / SW). The simulation also accepts the fraction of radars using the Compass methodology while all other radars are treated as Conventional FMCW. |
 
 Supported waveform types: `POSITIVE-SLOPE`, `POSITIVE-SLOPE STEPPED`, `NEGATIVE-SLOPE`, `NEGATIVE-SLOPE STEPPED`.

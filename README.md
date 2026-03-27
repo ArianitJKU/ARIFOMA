@@ -53,9 +53,10 @@ Unlike existing tools that generally focus on individual FOMs such as interferen
 
 ARIFOMA is the radar-level layer of a three-tier simulation stack:
 
-**Traffic-level modeling (SUMO):** The highway traffic scenario is generated with *L* lanes in eastbound and westbound direction and a vehicle density of *V* vehicles/km. Vehicles may carry either four corner radars with 60° field-of-view (FOV) or one front radar with 30° FOV. SUMO provides vehicle positions and velocities at acquisition intervals of at least *T*_A = 100 ms.
+**Traffic-level modeling (SUMO):** The highway traffic scenario is generated with *L* lanes in eastbound and westbound direction and a vehicle density of *V* vehicles/km. 
 
-**Propagation-level modeling (WiLabVISim):** WiLabVISim identifies radar pairs that are geometrically visible within their corresponding FOVs, considering both line-of-sight (LOS) paths and first-order reflected paths. This yields the set of potential interferers for the subsequent radar-level analysis.
+**Propagation-level modeling (WiLabVISim):** Vehicles may carry either four corner radars with 60° field-of-view (FOV) or one front radar with 30° FOV. SUMO provides vehicle positions and velocities at acquisition intervals of at least *T*_A = 100 ms. WiLabVISim identifies radar pairs that are geometrically visible within their corresponding FOVs, considering both line-of-sight (LOS) paths and first-order reflected paths. This yields the set of potential interferers for the subsequent radar-level analysis. 
+> **Note:** See https://github.com/V2Xgithub/WiLabVIsim
 
 **Radar-level modeling (ARIFOMA):** Radar waveform parameters are assigned to all radars according to the selected deployment. For each acquisition interval, a full transmission waveform with fixed CPI duration *T*_F is generated for the victim radars and all potential interferers. Interference occurs when a potential interferer overlaps within the victim's low-pass filter (LPF) bandwidth. Interference metrics are computed per CPI to obtain the unified FOMs.
 

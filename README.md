@@ -65,34 +65,52 @@ ARIFOMA is the radar-level layer of a three-level simulation stack:
 ```
 ARIFOMA/
 │
-├── main_sim.m                               % Main simulation entry point
+├── main_sim.m
+├── arifoma_gui_preview.png
+├── arifoma_manual_visualization.png
 │
-├── core/                                    % Core processing functions
-│   ├── ARIFOMA_build_parameter_table.m      % Assign waveform params to all radars
-│   ├── ARIFOMA_prepare_scene_views.m        % Build per-corner link tables
-│   ├── ARIFOMA_apply_all_schemes.m          % Apply mitigation scheme logic
-│   ├── ARIFOMA_build_engine_inputs.m        % Assemble CPI engine input bundle
-│   ├── ARIFOMA_run_strategy.m               % Dispatch to selected strategy
-│   ├── ARIFOMA_postprocess_and_update_ctx.m % Compute FOMs and update context
-│   ├── ARIFOMA_init_radarcorner_contexts.m  % Initialise per-corner context structs
-│   ├── ARIFOMA_apply_victim_overrides.m     % Override victim waveform/scheme
-│   └── ARIFOMA_find_worst_interference_vehicle.m
+├── FOMExtraction/
+│   ├── ARIFOMA_logCpiInterferenceMetrics.m
+│   └── ARIFOMA_postprocess_and_update_ctx.m
 │
-├── scene/                                   % Scene extraction and rendering
-│   ├── ARIFOMA_frame_extract_mc.m
-│   ├── ARIFOMA_frame_draw_mc.m
-│   └── prepopulate_lastF0BySensor.m
+├── Initialization/
+│   ├── ARIFOMA_build_engine_inputs.m
+│   ├── ARIFOMA_build_interference_link_table_from_frame.m
+│   ├── ARIFOMA_build_interference_path_ranges_per_corner.m
+│   ├── ARIFOMA_build_parameter_table.m
+│   ├── ARIFOMA_find_worst_interference_vehicle.m
+│   ├── ARIFOMA_init_accumulators.m
+│   └── ARIFOMA_init_radarcorner_contexts.m
 │
-├── utils/                                   % Utility and helper functions
-│   ├── scenario_defaults.m
-│   └── prep_axes.m
+├── Interference_Detection/
+│   ├── ARIFOMA_analytic_detector.m
+│   ├── ARIFOMA_analytic_detector_batsinspired.m
+│   ├── ARIFOMA_batsinspired_scene_runCPI.m
+│   └── ARIFOMA_conventional_scene_runCPI.m
 │
-├── data/                                    % Placeholder for scenario MAT-files
-│   └── README_data.md
+├── Strategies_and_Parameters/
+│   ├── ARIFOMA_apply_all_schemes.m
+│   ├── ARIFOMA_apply_interferer_schemes.m
+│   ├── ARIFOMA_apply_victim_overrides.m
+│   ├── ARIFOMA_apply_victim_scheme.m
+│   ├── ARIFOMA_generate_corner_parameters.m
+│   ├── ARIFOMA_generate_corner_parameters_compass.m
+│   ├── ARIFOMA_generate_fixed_parameter_pool.m
+│   ├── ARIFOMA_generate_LO_Signal_by_Scheme.m
+│   ├── ARIFOMA_run_strategy.m
+│   ├── ARIFOMA_strategy_base.m
+│   ├── ARIFOMA_strategy_batsinspiredfhperCPI.m
+│   ├── ARIFOMA_update_bats_interferers_from_own_perspective.m
+│   ├── ARIFOMA_update_interferer_bats_stats_end_cpi.m
+│   └── ARIFOMA_update_victim_bats_stats_end_cpi.m
 │
-├── results/                                 % Output MAT-files (git-ignored)
-│
-└── README.md
+└── Visualization/
+    ├── ARIFOMA_draw_scene_snapshot.m
+    ├── ARIFOMA_frame_draw_mc.m
+    ├── ARIFOMA_frame_extract_mc.m
+    └── ARIFOMA_prepare_scene_views.m
+README.md
+
 ```
 
 ---

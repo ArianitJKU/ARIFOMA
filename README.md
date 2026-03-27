@@ -238,8 +238,7 @@ simulation scripts.
 *Preliminary view of the ARIFOMA GUI. Full release pending acceptance
 of the corresponding publication.*
 
-> **Note:** The ARIFOMA GUI application is currently withheld pending
-> acceptance of the accompanying publication. It will be released in this
+> **Note:** The ARIFOMA GUI application will be released in this
 > repository upon acceptance.
 
 ---
